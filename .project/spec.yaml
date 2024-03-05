@@ -87,9 +87,9 @@ environment:
     os_distro_release: "20.04"
     schema_version: v2
     user_info:
-      uid: "0"
-      gid: "0"
-      username: root
+      uid: ""
+      gid: ""
+      username: ""
     package_managers:
     - name: apt
       binary_path: /usr/bin/apt
