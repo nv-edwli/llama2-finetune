@@ -23,7 +23,7 @@ Have questions? Please direct any issues, fixes, suggestions, and discussion on 
    
    * The location where you would like the Llama 2 model to live on the underlying **host** system. 
    * The Hugging Face username. 
-   * The Hugging Face API Key w/ Llama 2 access.
+   * The Hugging Face API Key w/ Llama 2 access (see below).
 
 ---
 Llama 2 is a gated model that is available for commercial use. To be able to download the model, [submit a request on Meta's portal](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) for access to all models in the Llama family. Please note that your HuggingFace account email address MUST match the email you provide on the Meta website, or your request will not be approved.
