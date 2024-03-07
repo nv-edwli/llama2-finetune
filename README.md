@@ -8,9 +8,9 @@ This is an [NVIDIA AI Workbench](https://www.nvidia.com/en-us/deep-learning-ai/s
 ### Project Description
 Llama 2 has gained traction as a robust, powerful family of Large Language Models that can provide compelling responses on a wide range of tasks. While the base 7B, 13B, and 70B models serve as a strong baseline for multiple downstream tasks, they can lack in domain-specific knowledge of proprietary or otherwise sensitive information. Fine-tuning is often used as a means to update a model for a specific task or tasks to better respond to domain-specific prompts. These notebooks walk through downloading and configuring the Llama 2 model from HuggingFace, preparing a custom dataset, and fine-tuning the pretrained base model against this new dataset. The 7B model has been selected by default in this project, but it is also configurable with the 13B and 70B versions of the model, depending on your compute resources and constraints. 
 
-* ```llama2-lora-ft.ipynb```: This notebook provides a sample workflow for fine-tuning the Llama 2 parameter base model for extractive Question-Answering on the SQuAD dataset using Low-Rank Adaptation Fine-tuning (LoRA), a popular parameter-efficient fine-tuning method. 
+* ```llama2-lora-ft.ipynb```: This notebook provides a sample workflow for fine-tuning the Llama 2 base model for extractive Question-Answering on the SQuAD dataset using Low-Rank Adaptation Fine-tuning (LoRA), a popular parameter-efficient fine-tuning method. 
 
-* ```llama2-ptuning.ipynb```: This notebook provides a sample workflow for fine-tuning the Llama 2 parameter base model for extractive Question-Answering on a custom dataset using customized prompt formattings and a p-tuning method.
+* ```llama2-ptuning.ipynb```: This notebook provides a sample workflow for fine-tuning the Llama 2 base model for extractive Question-Answering on a custom dataset using customized prompt formattings and a p-tuning method.
 
 Have questions? Please direct any issues, fixes, suggestions, and discussion on this project to the DevZone Members Only Forum thread [here](https://forums.developer.nvidia.com/t/support-workbench-example-project-llama-2-finetune/278375). 
 
