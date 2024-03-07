@@ -17,13 +17,18 @@ Have questions? Please direct any issues, fixes, suggestions, and discussion on 
 # Quickstart (Llama-2 7B)
 
 ### Prerequisites
-1. The NeMo Frameworks training container is used by this example project. This container is in General Availability and is open to the public. Sign up for access [here](https://developer.nvidia.com/nemo-framework/join). Once you have access, AI Workbench will use your NGC API Key integration to pull this container; ensure you have this integration configured on AI Workbench. 
+1. The NeMo Framework training container is used by this project. This container is in GA and is open to the public. Sign up for access [here](https://developer.nvidia.com/nemo-framework/join). Once you have access, AI Workbench will use your NGC API Key integration to pull this container; ensure you have this integration configured on AI Workbench. 
 
 2. AI Workbench will prompt you to provide a few pieces of information before running any apps in this project. Ensure you have this information ready. 
    
-   * The location for the model on the underlying host system. AI Workbench uses a volume mount for the ``/project/models`` directory, so the user will need to specify what location on the underlying host system the ``/project/models`` in the container will point to, and thus where on the underlying host machine the model weights will be downloaded.
-   * The Hugging Face username. This is used as part of the authentication credentials to pull the Llama 2 model weights to the project. 
-   * The Hugging Face API Key. This is used as part of the authentication credentials to pull the Llama 2 model weights to the project. Llama 2 is a gated model that is available for commercial use. To be able to download the model, [submit a request on Meta's portal](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) for access to all models in the Llama family. Please note that your HuggingFace account email address MUST match the email you provide on the Meta website, or your request will not be approved.
+   * The location where you would like the Llama 2 model to live on the underlying **host** system. 
+   * The Hugging Face username. 
+   * The Hugging Face API Key w/ Llama 2 access.
+
+---
+Llama 2 is a gated model that is available for commercial use. To be able to download the model, [submit a request on Meta's portal](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) for access to all models in the Llama family. Please note that your HuggingFace account email address MUST match the email you provide on the Meta website, or your request will not be approved.
+
+---
 
 ### Tutorial (Desktop App)
 
