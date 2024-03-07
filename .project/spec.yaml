@@ -2,9 +2,9 @@ specVersion: v2
 meta:
   name: llama-2-finetune
   image: project-llama-2-finetune
-  description: An example project for finetuning Llama-2
+  description: An example project for finetuning Llama 2 with NeMo Framework
   labels: []
-  createdOn: "2023-10-02T22:35:52Z"
+  createdOn: "2024-03-06T19:24:23Z"
   defaultBranch: main
 layout:
 - path: code/
@@ -22,11 +22,10 @@ layout:
 environment:
   base:
     registry: nvcr.io
-    image: ea-bignlp/ga-participants/nemofw-training:23.11
-    build_timestamp: "20230929092614"
+    image: ea-bignlp/ga-participants/nemofw-training:24.01
+    build_timestamp: "20231212000523"
     name: NeMo Framework GA Training Container
-    supported_architectures:
-    - amd64
+    supported_architectures: []
     cuda_version: "12.2"
     description: A training container with CUDA 12.2 and Pytorch 2.1
     entrypoint_script: ""
@@ -38,10 +37,10 @@ environment:
       type: jupyterlab
       class: webapp
       start_command: jupyter lab --allow-root --port 8888 --ip 0.0.0.0 --no-browser
-        --NotebookApp.base_url=\$PROXY_PREFIX --NotebookApp.default_url=/lab
-      health_check_command: '[ \$(echo url=\$(jupyter lab list 2>&1 | head -n 2 | tail
-        -n 1 | cut -f1 -d'''' '''' | grep -v ''''Currently'''' | sed ''''s@/?@/lab?@g'''')
-        | curl -o /dev/null -s -w ''''%{http_code}'''' --config -) == ''''200'''' ]'
+        --NotebookApp.base_url=\$PROXY_PREFIX --NotebookApp.default_url=/lab --NotebookApp.allow_origin='*'
+      health_check_command: '[ \$(echo url=\$(jupyter lab list | head -n 2 | tail
+        -n 1 | cut -f1 -d'' '' | grep -v ''Currently'' | sed "s@/?@/lab?@g") | curl
+        -o /dev/null -s -w ''%{http_code}'' --config -) == ''200'' ]'
       stop_command: jupyter lab stop 8888
       user_msg: ""
       icon_url: ""
@@ -50,8 +49,8 @@ environment:
         port: "8888"
         proxy:
           trim_prefix: false
-        url_command: jupyter lab list 2>&1 | head -n 2 | tail -n 1 | cut -f1 -d' ' |
-          grep -v 'Currently'
+        url_command: jupyter lab list | head -n 2 | tail -n 1 | cut -f1 -d' ' | grep
+          -v 'Currently'
     - name: tensorboard
       type: tensorboard
       class: webapp
@@ -81,10 +80,10 @@ environment:
     programming_languages:
     - python3
     icon_url: ""
-    image_version: 1.0.13
+    image_version: 1.0.3
     os: linux
     os_distro: ubuntu
-    os_distro_release: "20.04"
+    os_distro_release: "22.04"
     schema_version: v2
     user_info:
       uid: ""
@@ -94,29 +93,14 @@ environment:
     - name: apt
       binary_path: /usr/bin/apt
       installed_packages:
-      - build-essential
-      - ca-certificates
       - curl
-      - locales
       - git
       - git-lfs
-      - openssl=1.1.1f-1ubuntu2.17
-      - libssl1.1=1.1.1f-1ubuntu2.17
       - vim
-    - name: conda
-      binary_path: /opt/conda/bin/conda
-      installed_packages:
-      - jupyterlab=3.4.4
-      - tensorboard
-      - nodejs
-      - notebook
-      - python=3.10.12
-      - pytorch=1.13.1
-      - torchvision
-      - pytorch-cuda=11.7.0
     - name: pip
-      binary_path: /opt/conda/bin/pip
-      installed_packages: []
+      binary_path: /usr/local/bin/pip
+      installed_packages:
+      - jupyterlab==4.0.7
     package_manager_environment:
       name: ""
       target: ""

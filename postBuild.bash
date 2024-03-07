@@ -7,4 +7,6 @@
 sudo -E curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo -E bash
 sudo -E apt-get install git-lfs
 
-sudo -E jupyter nbextension enable --py widgetsnbextension
+sudo -E chmod -R 777 /opt/NeMo
+
+#sudo -E jupyter nbextension enable --py widgetsnbextension

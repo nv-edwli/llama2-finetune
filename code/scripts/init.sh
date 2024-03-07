@@ -1,10 +1,6 @@
 echo "Initializing the Llama-2 ${LLAMA2_SIZE} model."
 
 if [ ! -f /project/models/llama-$LLAMA2_SIZE.nemo ]; then
-    echo "Ensuring git-lfs is available"
-    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-    apt-get -y install git-lfs
-
     echo "Cloning the model weights"
     cd /project/models && git lfs clone https://$HF_USERNAME:$HF_API_KEY@huggingface.co/meta-llama/Llama-2-$LLAMA2_SIZE-hf
 
@@ -15,5 +11,5 @@ else
     echo "llama-$LLAMA2_SIZE.nemo already exists. Skipping."
 fi
 
-sleep 5
+sleep 3
 echo "Llama-2 ${LLAMA2_SIZE} model is initialized."
