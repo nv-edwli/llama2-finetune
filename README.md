@@ -54,13 +54,9 @@ If you do not NVIDIA AI Workbench installed, first follow the installation instr
 
    * `Environment` &rarr; `Secrets` &rarr; `Configure`. Specify the Hugging Face username and API Key secrets.
 
-6. On the top right of the window, select **Setup** to set up fine-tuning for the 7B model. _This will take several minutes to run_ as the model is pulled and converted to ``.nemo`` format.
+6. On the top right of the window, select **Jupyterlab**. 
 
-   * If you would like to use a different model instead of the default 7b, set ``Environment`` &rarr; ``Variables`` &rarr; ``LLAMA2_SIZE`` to "7b" (default), "13b", or "70b". 
-
-7. Upon completion, select the _dropdown_ from the top right of the window. Select **Jupyterlab**. Verify ```llama-2-[XX]b.nemo``` exists under the ```models```directory of the project.
-
-8. Navigate to the `code/llama-2-[XX]b` directory of the project. Then, open your fine-tuning notebook of choice and get started. Happy coding!
+7. Navigate to the `code/llama-2-[XX]b` directory of the project. Then, open your fine-tuning notebook of choice and get started. Happy coding!
 
 ### Tutorial (CLI-Only)
 Some users may choose to use the **CLI tool only** instead of the Desktop App. If you do not NVIDIA AI Workbench installed, first follow the installation instructions for AI Workbench [here](https://developer.nvidia.com/ai-workbench-beta/). Then, 
@@ -91,28 +87,20 @@ Some users may choose to use the **CLI tool only** instead of the Desktop App. I
    
    $ nvwb open <project_name>
    ```
+
+5. Start **Jupyterlab** by
+
+   ```
+   $ nvwb start jupyterlab
+   ```
    
-5. Start **Setup** by
-
-   ```
-   $ nvwb start setup
-   ```
-
    * Specify the file path of the mount, eg. where the Llama 2 model will live on your **host** machine.
    
       eg. if your downloaded Llama2 model directory resides in your home path, enter ```/home/[user]```
 
    * Specify the Hugging Face username and API Key secrets.
 
-6. Start **Jupyterlab** by
-
-   ```
-   $ nvwb start jupyterlab
-   ```
-
-7. Verify ```llama-2-[XX]b.nemo``` exists under the ```models```directory of the project.
-
-8. Navigate to the `code/llama-2-[XX]b` directory of the project. Then, open your fine-tuning notebook of choice and get started. Happy coding!
+6. Navigate to the `code/llama-2-[XX]b` directory of the project. Then, open your fine-tuning notebook of choice and get started. Happy coding!
 
 ---
 **Tip:** Use ```nvwb help``` to see a full list of NVIDIA AI Workbench commands. 
