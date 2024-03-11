@@ -22,7 +22,7 @@ layout:
 environment:
   base:
     registry: nvcr.io
-    image: ea-bignlp/ga-participants/nemofw-training:24.01
+    image: nvidia/nemo:24.01.framework
     build_timestamp: "20231212000523"
     name: NeMo Framework GA Training Container
     supported_architectures: []
