@@ -17,9 +17,7 @@ Have questions? Please direct any issues, fixes, suggestions, and discussion on 
 # Quickstart (Llama-2 7B)
 
 ### Prerequisites
-1. The NeMo Framework training container is used by this project. This container is in GA and is open to the public. Sign up for access [here](https://developer.nvidia.com/nemo-framework/join). Once you have access, AI Workbench will use your NGC API Key integration to pull this container; ensure you have this integration configured on AI Workbench. 
-
-2. AI Workbench will prompt you to provide a few pieces of information before running any apps in this project. Ensure you have this information ready. 
+1. AI Workbench will prompt you to provide a few pieces of information before running any apps in this project. Ensure you have this information ready. 
    
    * The location where you would like the Llama 2 model to live on the underlying **host** system. 
    * The Hugging Face username. 
@@ -108,7 +106,7 @@ Some users may choose to use the **CLI tool only** instead of the Desktop App. I
 ---
 
 ## Tested On
-This notebook has been tested with a 1x NVIDIA A100-80gb GPU system and the Beta version of NVIDIA AI Workbench: ```nvwb 0.13.14 (stable; linux; amd64; go1.21.3; Wed Jan 10 20:09:13 UTC 2024)```
+This notebook has been tested with a 1x NVIDIA A100-80gb GPU system and the Beta version of NVIDIA AI Workbench: ```nvwb 0.21.3 (internal; linux; amd64; go1.21.3; Tue Mar  5 03:55:43 UTC 2024)```
 
 # License
 This NVIDIA AI Workbench example project is under the [Apache 2.0 License](https://github.com/nv-edwli/llama-2-finetune/blob/main/LICENSE.txt)
